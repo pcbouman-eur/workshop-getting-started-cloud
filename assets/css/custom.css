@@ -1,0 +1,18 @@
+figcaption {
+    text-align: center;
+}
+
+article {
+    counter-reset: figureCounter;
+}
+
+article figure {
+    counter-increment: figureCounter;
+    margin: 0.75em 0.75em;
+
+}
+
+article figure figcaption::before {
+    font-weight: bold;
+    content: "Figure " counter(figureCounter) ". ";
+}
