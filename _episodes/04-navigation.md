@@ -102,7 +102,7 @@ $ mkdir documents
 ```
 {: .language-bash}
 
-Let's us `ls` again. What do we see?
+Let's use `ls` again. What do we see?
 
 Our folder is there, awesome. What if we wanted to go inside it and do stuff
 there? We will use the `cd` (change directory) command to move around. Let's

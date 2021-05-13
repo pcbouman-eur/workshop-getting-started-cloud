@@ -21,9 +21,7 @@ TODO!
 * Discuss what different types of instances you can pick, discuss CPU/RAM
 * Discuss the operating system
 * Discuss Linux/Bash for servers vs Windows (and remote desktop)
-
-
-
+* Discuss installing relevant software `sudo`, `apt` etc.
 
 {% include links.md %}
 
