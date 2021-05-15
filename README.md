@@ -1,4 +1,16 @@
-# FIXME Lesson title
+# Getting Started on Cloud Computing
+
+This is the repository of a workshop/lesson "[Getting Started on Cloud Computing](https://pcbouman-eur.github.io/workshop-getting-started-cloud/)".
+It uses the Jekyll styles and site setup of [The Carpentries](https://carpentries.org/) but is in no way officially affiliated with them.
+This lessons builds on an alpha-version of the lesson on [Introduction to Using the Shell in a High-Performance Computing Context](http://www.hpc-carpentry.org/hpc-shell/).
+But rather than a focus on HPC, it focuses on more private cloud computing, i.e. running your code on a typical AWS/Azure/Google Cloud Linux instance.
+For that purpose, some things were changed:
+
+* Added an episode with general history on computing an some explanation what the Cloud actually is
+* Added an episode that explains how you typically set up a cloud instance, in the example Azure is used but general principles are discussed.
+* Less focus on security when connecting to SSH. No RSA-keypairs are used in the workshop itself, this part is shortened and moved to a callout.
+* Added three versions of an episode that discusses how to run your own programming code. The three versions are for three languages: Python, R and Java.
+* Added a lesson that discusses `tmux`, so users can easily disconnect when their computations are running, and `cron`, in case they want to run something periodically (e.g. scraping)
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
