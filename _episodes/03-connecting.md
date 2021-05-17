@@ -1,7 +1,7 @@
 ---
 title: "Connecting to a remote system"
-teaching: 25 
-exercises: 10
+teaching: 10
+exercises: 0
 questions:
 - How do I open a terminal?
 - How do I connect to a remote computer?

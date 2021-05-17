@@ -1,7 +1,7 @@
 ---
 title: Writing and reading files
 teaching: 10
-exercises: 15
+exercises: 10
 questions:
 - How do I create/edit text files?
 - How do I move/copy/delete files?

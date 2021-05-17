@@ -1,7 +1,7 @@
 ---
 title: "Moving around and looking at things"
 teaching: 15 
-exercises: 10
+exercises: 5
 questions:
 - How do I navigate and look around the system?
 objectives:
