@@ -25,6 +25,10 @@ keypoints:
 > with all the files assumed to be present during this episode.
 {: .prereq }
 
+**Note:** this episode is written for participants who prefer to work
+with R. There are also versions of this episode for participants
+who prefer [Python](../06-python-run/index.html) or who prefer [Java](../08-java-run/index.html). If you are finished with this lesson, you can also go to the [next episode](../09-tmux-cron/index.html).
+
 In this episode we will run our own code, written in R,
 from the command line. Let us suppose that we have written a
 program that searches for integer number in a certain range

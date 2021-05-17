@@ -25,6 +25,10 @@ keypoints:
 > with all the files assumed to be present during this episode.
 {: .prereq }
 
+**Note:** this episode is written for participants who prefer to work
+with Python. There are also versions of this episode for participants
+who prefer [R](../07-r-run/index.html) or who prefer [Java](../08-java-run/index.html).
+
 In this episode we will run our own code, written in Python,
 from the command line. Let us suppose that we have written a
 program that searches for integer number in a certain range

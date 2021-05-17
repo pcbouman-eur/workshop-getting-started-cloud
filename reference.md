@@ -4,6 +4,8 @@ layout: reference
 
 ## Glossary
 
+**Note:** the glossary is currently incomplete.
+
 {:auto_ids}
 mainframe
 : A big computer that is shared by many users. First using punch-cards, later via terminals.
