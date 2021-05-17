@@ -143,6 +143,7 @@ to connect, the option to *Stop* or *Delete* the virtual machine, as well as the
 of the virtual machine.
 
 <figure>
+    <a name="vm-options"></a>
     <img src="../fig/azure-create-vm-7.png" alt="Landing page of the virtual machine with management options.">
     <figcaption>Landing page of the virtual machine</figcaption>
 </figure>
@@ -154,5 +155,35 @@ virtual machine, you need to this connect to enter this into a *Secure Shell* (S
 to connect and control the computer.
 
 In the next episode we use this information to connect to the virtual machine.
+
+## Cleaning Up
+
+At some point, you are done with your virtual machine and do not need it
+any more, you should shut it down and delete it. Typically, you can do
+so via the management page of the virtual machine, for example the one
+you can see in the <a href="#vm-options">figure above</a>. Note that
+there may be resources related to your machine that are not deleted
+automatically once you delete te machine. <strong>It is a good idea to
+check if all resources have been removed and deleted</strong> to avoid
+unexpected costs and billing!
+
+> ## Avoid unexpected billing costs!
+>
+> Some cloud providers, including the large ones such as AWS, Azure and
+> Google cloud bill you for different resources separately. Things that
+> may be billed separately can be:
+>
+> * Running virtual machines
+> * Disks and storage space
+> * Networking (traffic, IP addresses, hostnames)
+> * Monitoring and Analytics services
+>
+> Once you are done with your virtual machine it is thus very wise to 
+> double check if all (billable) resources are deleted from your
+> account. If you are not going to use cloud services for a while,
+> you can even consider to remove all services in your account just
+> to be sure.
+{: .caution }
+
 {% include links.md %}
 

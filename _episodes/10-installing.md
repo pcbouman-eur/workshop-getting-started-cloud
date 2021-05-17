@@ -105,5 +105,19 @@ to use, to see how it can be installed in a Linux context. Often multiple option
 given, but the option that works with a package manager is often easier than alternatives,
 such as compiling and installing the software from source code.
 
-
+> ## Commercial packages and Binary Software
+> 
+> In case you want to use commercial software, such as MATLAB or CPLEX
+> this is typically not  available via the package manager.
+> First, this software must be support Linux, and then you should obtain
+> a specific installer for Linux. 
+> For shared libraries, you also need a different type of library: a 
+> Windows `dll` file does not work on Linux, as the binary format is
+> different. Look at the documentation of the software you want to use.
+> Note that this typically only holds true for *binary* applications.
+> Interpreted scripts (such as Python and R use), as well as bytecode
+> based software (Java or C#) generally should be easier to run on
+> different operating systems, but some care is needed if they make use
+> of binary/compiled software.
+{: .callout }
 

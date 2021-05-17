@@ -67,6 +67,22 @@ public class Divisors {
 ```
 {: .language-java}
 
+> ## Portable Code
+>
+> Since Java compiles to bytecode that is ran on the JVM, you can easily
+> write and compile Java code on a Windows or Mac computer,
+> and then run it on a Linux computer without modification.
+> Making sure code runs on multiple operating
+> system is called writing *portable* code. For most Java code, 
+> things will work without adaption, but you may have to
+> pay attention with things that can differ between systems, such as:
+>
+> * Don't hard code absolute file paths that only exist on your local computer, such as `C:\Users\Jane McDoe\mydata.csv`, but always use relative paths, e.g. `mydata.csv`.
+> * Avoid hard coding file separator symbols, i.e. `/` and `\` as they differ between Windows and Mac/Linux. Use the property `File.separator` if you need this, as it will take value depending on the operating system your program is ran on, or look for a more stable way to construct file paths in the documentation.
+> * Avoid calling system specific commands, such as `System.exec('ls')`, as it will not work on a Windows system.
+> * If your program uses compiled or native libraries, be sure that the native libraries are available on all operating systems you want to run your program on.
+{: .callout }
+
 We will now consider how we can run this program from the command line.
 
 ## Running a Java program
@@ -350,6 +366,41 @@ compiler `javac` as well as the JVM runtime `java` need to be able to find it.
 A `jar` file containing version `4.6.1` of the picocli library can be found in 
 `~/examples/java/picocli-4.6.1.jar`. We will pass the argument `-cp .:picocli-4.6.1jar`
 to make sure they are able to.
+
+> ## Alternative: use a maven project
+>
+> If you work with many libraries, an alternative approach to passing
+> the libraries via the `-cp` argument to the compiler and JVM, is to
+> use a build tool to package everything in one big `.jar` file, and
+> then run that `.jar` file directly. Maven is one of the most famous
+> build tools for Java.
+>
+> In the directory `~/examples/java/project` you can find a maven
+> project that is configured to automatically download and package
+> `picocli` with your own code. The code can be found in
+> `~/examples/java/project/main/java/examples/DivisorsArgParse.java`
+> and the maven project configuration file in `~/examples/java/project/pom.xml`.
+>
+> To compile the project using maven, you can do so using
+> ```
+> $ cd ~/examples/java/project
+> $ mvn package
+> ```
+> {: .language-bash }
+>
+> This will create a single runnable `jar` file called `~/examples/java/project/target/divisors-argparse.jar`.
+> You can run this file as follows:
+> ```
+> $ java -jar ~/examples/java/project/target/divisors-argparse.jar
+> ```
+> {: .language-bash }
+>
+> The main advantage of this is that you do not have to specify the
+> library every time. You can even copy the `.jar` packaged file to 
+> another computer and run it there. Similarly, if you export a
+> runnable `.jar` file from Eclipse or IntelliJ on your local computer,
+> you can use this command to run this file directly on Linux as well.
+{: .callout }
 
 Once we make sure the library can be found by Java, using it is not that difficult.
 We do need to change the way our program is set up a little bit, as picocli will

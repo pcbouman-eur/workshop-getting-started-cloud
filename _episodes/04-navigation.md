@@ -24,6 +24,7 @@ keypoints:
 >
 > * You can go back to (and edit) the previous commands you typed with <kbd>&uarr;</kbd>. If you go too far in history, you can move forward in history with <kbd>&darr;</kdb>. Using these keys well will avoid a lot of type, in particular if you introduce typos, or want to make small adjustments to a command!
 > * Commands and filenames can often be autocompleted by pressing <kbd>Tab</kbd>. If you have to type in the name of a file `this_is_a_super_long_filename_i_would_hate_to_have_to_type_it_all`, you can type a small part of it, e.g. `this` and press tab. Typically, `bash` will auto-complete the filename for you, if this is possible. If there is some ambiguity, it will only autocomplete up to the part where there is no ambiguity. Try pressing <kbd>Tab</kbd> when you can, and you'll get the hang of it!
+> * In many terminal applications, pasting is done by doing a *right-click* with your mouse, so the standard shortcut <kbd>CTRL</kbd>+<kbd>V</kbd> is often not necessary. Similarly, copying text to the clipboard is often done by just selecting a piece of text in the terminal, and the standard shortcut <kbd>CTRL</kbd>+<kbd>C</kbd> is often not necessary.
 >
 {: .prereq }
 

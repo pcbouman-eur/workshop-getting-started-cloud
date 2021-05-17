@@ -60,6 +60,20 @@ in the portal of your cloud provider. During the workshop, your instructor will
 provide you with this information. Additionally, you need a user name and password
 to be able to login to the remote computer.
 
+> ## Entering a password
+>
+> When you are entering a password in a terminal,
+> **no output is displayed**. If you are used to password prompts
+> that show dots or stars indicated you typed something, this
+> can be a bit unsettling, but it is perfectly normal. Just press
+> <kbd>&crarr;</kbd> when you are done, and you should get a message
+> indicating if your password is correct.
+>
+> One reason it works this way is that less information is leaked:
+> someone who peeks at your screen while you enter your password
+> will not even know how long your password is!
+{: .caution }
+
 Go to the section that fits your operating system:
 
 * <a href="#windows">Windows</a>
@@ -109,8 +123,30 @@ If all went well, you should be logged in now. <a href="#success">Continue to th
 Once you have started the Terminal application, you can either type in
 the `ssh` command. If you prefer that, read the <a href="#terminal">Linux section</a> of this episode.
 
-**TODO** some screenshots here
+To set up a remote connecting with a GUI dialog, choose the
+*New Remote Connection...* option in the *Shell* menu of the Terminal
+application, as can be seen below:
 
+<figure>
+    <img src="../fig/macos-terminal-1.png" alt="Set up a remote connecting with the Mac OS terminal application">
+    <figcaption>Set up a remote connecting with the Mac OS terminal application</figcaption>
+</figure>
+
+You should then click *Secure Shell (ssh) and click the + button to add a server. Add the IP address of the server you want to connect to, and fill in the user name you want to use to connect to the server. You should be able to see that a command is constructed that looks something like `ssh username@the.server.address`, as in the example below:
+
+<figure>
+    <img src="../fig/macos-terminal-2.png" alt="Setting up a remote connecting with an address and user name in the Mac OS terminal application.">
+    <figcaption>Setting up a remote connecting with an address and user name in the Mac OS terminal application.</figcaption>
+</figure>
+
+Finally, the first time you do this you will see a prompt similar to the prompt below asking you to add a certificate for the server you connect to. **Accept the certificate by typing** `yes` and pressing <kbd>&crarr;</kbd>.
+
+<figure>
+    <img src="../fig/macos-terminal-3.png" alt="Prompt to accept a host fingerprint/certificate the first time  you connect to a new server">
+    <figcaption>Prompt to accept a host fingerprint/certificate the first time you connect to a new server</figcaption>
+</figure>
+
+Finally, you should enter your password. Remember that anything you enter will remain invisible (not dots or stars are shown). You can use a right-click to enter a password. Once you have entered the password, press <kbd>&crarr;</kbd> to enter it.
 
 If all went well, you should be logged in now. <a href="#success">Continue to the *success* part of this episode</a>.
 
@@ -125,7 +161,7 @@ ssh yourUsername@the.server.address
 {: .language-bash}
 
 The first time you connect to a new computer, you may have to accept the
-security certificate of the server. Typically, your client will store this
+security certificate of the server. **Accept the certificate by typing** `yes` and pressing <kbd>&crarr;</kbd>. Typically, your client will thenstore this
 certificate so the next time you connect, it does not have to ask you about
 the certificate any more. If the certificate of the server would change,
 that would mean that you are either communicating with a different virtual machine

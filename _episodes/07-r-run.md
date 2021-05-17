@@ -54,6 +54,21 @@ for (i in 1:upper_bound) {
 ```
 {: .language-r}
 
+> ## Portable Code
+>
+> Since R scripts are interpreted, you can easily write them on
+> a Windows or Mac computer, and then run them on a Linux computer
+> without modification. Making sure code runs on multiple operating
+> system is called writing *portable* code. For most R code, 
+> things will work without adaption, but  you may have to
+> pay attention with things that can differ between systems, such as:
+>
+> * Don't hard code absolute file paths that only exist on your local computer, such as `C:\Users\Jane McDoe\mydata.csv`, but always use relative paths, e.g. `mydata.csv`.
+> * Avoid hard coding file separator symbols, i.e. `/` and `\` as they differ between Windows and Mac/Linux. Use the property `.Platform$file.sep` if you need this, as it will take value depending on the operating system your program is ran on, or look for a more stable way to construct file paths in the documentation.
+> * Avoid calling system specific commands, such as `system('ls')`, as it will not work on a Windows system.
+> * If your program uses compiled or native libraries, be sure that the native libraries are available on all operating systems you want to run your program on.
+{: .callout }
+
 We will now consider how we can run this program from the command line.
 
 ## Running an R program
@@ -155,6 +170,7 @@ while (read_more) {
       read_more <- FALSE
    }
    else {
+      # The append function can be used to add an element to an existing vector
       divisors <- append(divisors, div)
    }
 }
