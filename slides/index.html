@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Getting Started on Cloud Computing</title>
+
+		<meta name="description" content="Slides for the workshop 'Getting Started on Cloud Computing'">
+		<meta name="author" content="Paul Bouman">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			.smaller {
+				font-size: 90%;
+			}
+
+			.small {
+				font-size: 80%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+
+					<h3>Getting Started on Cloud Computing</h3>
+					<p>
+						<small><a href="../" target="_blank">Workshop materials</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Workshop Overview</h2>
+					<ol class="smaller">
+						<li>What is Cloud Computing (10 min)</li>
+						<li>Setting up a machine in the cloud (10 min)</li>
+						<li>Connecting to a remote system (10 min)</li>
+						<li>Moving around and looking at things (20 min)</li>
+						<li>Writing and reading files (20 min)</li>
+						<li>Run your own code (Python/R/Java) + Break (40 min)</li>
+						<li>Long running and scheduled programs (20 min)</li>
+						<li>Installing Software (10 min)</li>
+						<li>Conclusion</li>
+					</ol>
+				</section>
+
+				<section>
+					<section>
+						<h2>What is Cloud Computing</h2>
+					</section>
+					<section>
+						<h2>Early days of computing</h2>
+						<ul>
+							<li>Large, very expensive computers</li>
+							<li>Punchcards, printouts on paper</li>
+							<li>Shared by many users</li>
+						</ul>
+						<figure>
+							<img src="../fig/IBM_704_mainframe.gif" alt="IBM 704 mainframe (1964)" width="300px" />
+							<figcaption>IBM 704 mainframe (1964).
+							 <small><a href="https://commons.wikimedia.org/wiki/File:IBM_704_mainframe.gif" target="_blank">Courtesy of Lawrence Livermore National Laboratory</a></small></figcaption>
+							</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h2>The Terminal (late 70's)</h2>
+						<ul class="smaller">
+							<li>Big innovation: keyboard and screen</li>
+							<li>Actual computation was still performed on the mainframe</li>
+						</ul>
+						<figure>
+							<img src="../fig/DEC_VT100_terminal.jpg" alt="DEC VT100 terminal (1978)" width="250px" />
+							<figcaption>DEC VT100 terminal (1978)
+								<br />
+							<small><a href="https://commons.wikimedia.org/wiki/File:DEC_VT100_terminal.jpg" target="_blank">Courtesy of Jason Scott (CC BY 2.0)</a></small>
+							</figcaption>
+						</figure>						
+					</section>
+					<section>
+						<h2>Personal Computers (80's)</h2>
+						<ul class="smaller">
+							<li>Data no longer centralized on a main frame, but on all kinds of storage media</li>
+							<li>Drawback: multiple version of your data, which one is the true one?</li>
+						</ul>						
+						<figure>
+							<img src="../fig/Removable_Storage.jpg" alt="40 Years of Removable Storage" width="250px">
+							<figcaption>Removable Storage.
+								<small><a href="https://commons.wikimedia.org/wiki/File:Forty_years_of_Removable_Storage.jpg" target="_blank">Courtesy of avaragado (CC BY 2.0)</a></small>
+							</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h2>Virtualization</h2>
+						<ul class="small">
+							<li>Computers became fast enough to act like they are multiple <em>virtual</em> computers</em></li>
+							<li>Big advantage is that companies can exploit economies of scale</li>
+						</ul>
+						<img src="../fig/virtualization.png" alt="Hardware Virtualization Overview" width="250px" />
+					</section>
+					<section>
+						<h3>The Cloud</h3>
+						<p>Some typical advantages:</p>
+						<ul class="small">
+							<li><em>Centralization</em> : have one logical place that contains the true version of your data.</li>
+							<li><em>Outsourcing</em> : let companies who have the expertise handle your IT and focus on your core bushiness competencies.</li>
+							<li><em>Scalability</em> : using virtualization you can get the most out of your resources.</li>
+						</ul>
+						<p>Typical cloud services:</p>
+						<ul class="small">
+							<li><em>Software-as-a-Service (SaaS)</em> : centralized software, e.g. Office 365, Google Docs, Overleaf</li>
+							<li><em>Infrastructure-as-a-Service (IaaS)</em> : virtual machines, servers, foundation used for many cloud services.</li>
+						</ul>
+					</section>
+					<section data-markdown>
+						### Some cloud providers
+
+						* [Microsoft Azure](https://azure.microsoft.com) offers [Virtual Machines](https://azure.microsoft.com/en-us/services/virtual-machines/) and has a [free $100 trial for students](https://azure.microsoft.com/en-us/free/students/)
+						* [Amazon Web Services](https://aws.amazon.com) offers virtual machines under the name Elastic Compute Cloud, abbreviated to [EC2](https://aws.amazon.com/ec2/). They have a [free tier](https://aws.amazon.com/free/).
+						* [Google Cloud](https://cloud.google.com/) offers virtual machines under the name [Compute Engine](https://cloud.google.com/compute/) and provides $300 free credits to new customers.						
+					</section>					
+					<section data-markdown>
+						## Key Points
+
+						* Explain concepts of centralization, outsourcing and virtualization
+						* Discuss different cloud service models such as IaaS and SaaS
+						* Name the important cloud service providers such as Amazon and Microsoft
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Setting up a machine in the cloud</h2>
+					</section>
+					<section>
+						<h3>Example with Azure</h3>
+						<figure>
+							<img src="../fig/azure-create-vm.png" alt="Creating a new VM from the Azure Portal" height="400">
+							<figcaption>Creating a VM from the Azure portal
+							</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h3>Machine properties</h3>
+						<p>CPU/RAM (size), Operating System, Machine name</p>
+						<figure>
+							<img src="../fig/azure-create-vm-2.png" alt="Configure the properties of a new VM" height="400">
+							<figcaption>Configuring the properties of a new VM in Azure</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h3>Administrative User</h3>
+						<figure>
+							<img src="../fig/azure-create-vm-3.png" alt="Configuring an administrative user" height="400">
+						<figcaption>Configuring an administrative user for the Virtual Machine</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h3>Administrative User</h3>
+						<p>Security is important, and you need this to be able to connect to your machine</p>
+						<figure>
+							<img src="../fig/azure-create-vm-3.png" alt="Configuring an administrative user" height="400">
+							<figcaption>Configuring an administrative user for the Virtual Machine</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h3>Storage</h3>
+						<p>If the default storage is not enough (storage typically incurs a fee as well)</p>
+						<figure>
+							<img src="../fig/azure-create-vm-4.png" alt="Configuring storage on the Virtual Machine" height="400">
+							<figcaption>Configuring storage on the Virtual Machine</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h3>Confirm</h3>
+						<p>The machine is only created after we confirm</p>
+						<figure>
+							<img src="../fig/azure-create-vm-5.png" alt="Confirm the creation of the Virtual Machine" height="400">
+							<figcaption>Confirm the creation of the Virtual Machine</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h3>Ready</h3>
+						<p>After a few moments, the machine is now ready to use</p>
+						<figure>
+							<img src="../fig/azure-create-vm-6.png" alt="Our Virtual Machine is ready to use!" height="400">
+							<figcaption>Our Virtual Machine is ready to use!</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h3>Ready</h3>
+						<p>After a few moments, the machine is now ready to use</p>
+						<figure>
+							<img src="../fig/azure-create-vm-6.png" alt="Our Virtual Machine is ready to use!" height="400">
+							<figcaption>Our Virtual Machine is ready to use!</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h3>Landing page</h3>
+						<p>Information needed to connect, and stop/delete the machine</p>
+						<figure>
+							<a name="vm-options"></a>
+							<img src="../fig/azure-create-vm-7.png" alt="Landing page of the virtual machine with management options." height="400">
+							<figcaption>Landing page of the virtual machine</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h3>Cleanup / Avoid unexpected costs</h3>
+						<p>When you stop/delete machine, make sure all resources are deleted</p>
+						<ul class="smaller">
+							<li>Running virtual machines</li>
+							<li>Disks and storage space</li>
+							<li>Networking (traffic, IP addresses, hostnames)</li>
+							<li>Monitoring and Analytics services</li>
+						</ul>
+					</section>
+					<section data-markdown>
+						## Key Points
+
+						* Understand that CPU, RAM, Disk Space, Operating System and a administrative user are needed when you create a new virtual machine
+						* Understand that a hostname and/or IP address is needed to connect to a virtual machine, either using Secure Shell (SSH) or Remote Desktop (RDP)
+						* Be aware that you delete/stop all resources when you are finished with you virtual machine, to avoid unexpected costs.						
+					</section>					
+				</section>
+
+				<section>
+					<section>
+						<h2>Connecting to a remote system</h2>
+					</section>
+					<section data-markdown>
+						## How to connect
+						
+						* **Windows** : Use [PuTTY) (you probably want the 64-bit x86 installer)
+						* **Mac OS** : Terminal application (use the finder, or find it under Accessories)
+						* **Linux** : Use the `ssh` command from the terminal
+					</section>
+					<section>
+						<h3>Windows / PuTTY - Step 1 (Connecting)</h3>
+						<figure>
+							<img src="../fig/putty-connect-1.png" alt="The screen PuTTY opens with" height="300">
+						</figure>
+					</section>
+					<section>
+						<h3>Windows / PuTTY - Step 2 (Accept Certificate, enter username and password)</h3>
+						<figure>
+							<img src="../fig/putty-connect-2.png" alt="The screen PuTTY opens with" height="300">
+						</figure>
+						<p class="smaller"><strong>Note:</strong> use the right mouse button to paste. You <strong>don't get feedback while typing the password.</strong></p>
+					</section>
+					<section>
+						<h3>Mac OS - Step 1</h3>
+						<figure>
+							<img src="../fig/macos-terminal-1.png" alt="Set up a remote connecting with the Mac OS terminal application" height="300">
+						</figure>
+					</section>
+					<section>
+						<h3>Mac OS - Step 2</h3>
+						<p>Under <em>Secure Shell (ssh)</em> use the server's IP or hostname. Fill in your username.</p>
+						<figure>
+							<img src="../fig/macos-terminal-2.png" alt="Setting up a remote connecting with an address and user name in the Mac OS terminal application." height="300">
+						</figure>
+					</section>
+					<section>
+						<h3>Mac OS - Step 3</h3>
+						<p>Type the word <code>yes</code> and press enter</p>
+						<figure>
+							<img src="../fig/macos-terminal-3.png" alt="Prompt to accept a host fingerprint/certificate the first time  you connect to a new server" height="300">
+						</figure>
+						<p class="smaller"><strong>Note:</strong> use the right mouse button to paste. You <strong>don't get feedback while typing the password.</strong></p>
+					</section>
+					<section>
+						<h3>Success</h3>
+						<figure>
+							<img src="../fig/putty-connect-3.png" alt="PuTTY example of a successful login" height="300">
+							<figcaption>Example of a succesful login with a typical welcome message from Ubuntu</figcaption>
+						</figure>
+						<p>The <code>$</code> indicates you can start typing commands.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Moving around and looking at things</h2>
+					</section>
+				</section>				
+
+				<section>
+					<section>
+						<h2>Writing and reading files</h2>
+					</section>
+				</section>		
+
+				<section>
+					<section>
+						<h2>Run your own code (Python/R/Java)</h2>
+					</section>
+				</section>	
+
+				<section>
+					<section>
+						<h2>Long running and scheduled programs</h2>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Installing Software</h2>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Conclusion</h2>
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				transition: 'none',
+				backgroundTransition: 'none',
+
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
