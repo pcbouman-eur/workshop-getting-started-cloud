@@ -75,7 +75,7 @@ The ability to outsource complicated IT management tasks to companies who have a
 experience is potentially very attractive to many (smaller) companies, as they can avoid having to set up their own
 IT department and focus on their core business competencies.
 
-While access to the internet become more and more widespread, computers became so powerful that their resources
+While access to the internet became more and more widespread, computers became so powerful that their resources
 were *mostly idle* during daily office work, and operating systems were improved to be able to run many different
 programs in parallel. This innovation was taken to the extreme by the development of *virtualization* software
 which made it possible to let a big and powerful computer behave as if it were a number of smaller virtual computers,

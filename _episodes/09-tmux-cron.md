@@ -1,7 +1,7 @@
 ---
 title: "Long running and scheduled programs"
 teaching: 15
-exercises: 10
+exercises: 5
 questions:
 - How do I prevent that programs stop running if I disconnect
 - How can I schedule a program to be executed at certain times

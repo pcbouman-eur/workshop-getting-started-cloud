@@ -90,7 +90,7 @@ it in.
 
 <figure>
     <img src="../fig/putty-connect-1.png" alt="The screen PuTTY opens with">
-    <figcaption>The starting screen of PuTTY can be used to set up an ssh-connectiong to a remote computer</figcaption>
+    <figcaption>The starting screen of PuTTY can be used to set up an ssh-connection to a remote computer</figcaption>
 </figure>
 
 To get started, everything you need to do is fill in the hostname or 
