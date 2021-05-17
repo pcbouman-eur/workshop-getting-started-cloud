@@ -14,6 +14,6 @@ or [WinSCP](https://winscp.net/eng/index.php) (Windows only).
 During this workshop, access to a cloud instance will be provided where workshop participants can connect to via these application
 and work remotely using the shell of the cloud instance.
 
-More detailed information can be found in the [third episode](03-connecting).
+More detailed information can be found in the [third episode](03-connecting/index.html).
 
 {% include links.md %}

@@ -11,12 +11,17 @@ with an Ubuntu environment (as `apt` is used as an example and some of the scree
 There is an instructor package
 [instructor_setup.tar.gz](../files/instructor_setup.tar.gz)
 available. This contains a number of useful scripts, as well as a skeleton directory and file structure for the
-user accounts of the participants (this helps them get up to speed quickly.
+user accounts of the participants (this helps them get up to speed quickly. The skeleton directory with files used during the workshop
+can also be downloaded separately as [userbase.tar.gz](../files/userbase.tar.gz).
+
+## Setting up the Server
 
 The workshop assume some standard versions of Java, Python and R are
 available. It is useful if the teacher installs this software before the
 start of the workshop. The script `configure_server.sh` can be used to
 perform this on a fresh Azure installation of Ubuntu 18.04.
+
+## Creating accounts for Participants
 
 A second step is to create user accounts for the users. The script 
 `create_users.sh` can be used for this purpose. It will use the 
@@ -26,20 +31,19 @@ with some prefix (e.g. `test1`, `test2`, etcetera). Random passwords
 are generated and saved into a `.csv` file that can be used to 
 communicate a username and password combination to each user.
 
-> ## Example
->
-> Suppose we want to create 60 users prefixed by `test` with
-> random passwords of length 12 and save their passwords to the
-> file `workshop-users.csv`, you run the following command:
-> ```
-> $ ./create_users.sh -n 60 -p test -f workshop-users.csv -l 12 -c
-> ```
-> {: .language-bash }
->
-> Note that some options are optional: the default prefix is `test`,
-> and the default password length is `12`. The `-c` flag is required
-> to actually create the users and set the password. If ommitted,
-> only a csv-file with username/password combinations will be created.
+Suppose we want to create 60 users prefixed by `test` with
+random passwords of length 12 and save their passwords to the
+file `workshop-users.csv`, you run the following command:
+```
+$ ./create_users.sh -n 60 -p test -f workshop-users.csv -l 12 -c
+```
+{: .language-bash }
+Note that some options are optional: the default prefix is `test`,
+and the default password length is `12`. The `-c` flag is required
+to actually create the users and set the password. If ommitted,
+only a csv-file with username/password combinations will be created.
+
+## Resetting a participant's home directory
 
 Finally, during the workshop it may happen that a users accidentally
 deletes all the files during one episode, which may make things tricky
