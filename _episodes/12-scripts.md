@@ -1,7 +1,8 @@
 ---
 title: "(BONUS) Scripts, variables, and loops"
-teaching: 45
-exercises: 10
+# Originally, these were 45 and 15
+teaching: 0
+exercises: 0
 questions:
 - How do I turn a set of commands into a program?
 objectives:

@@ -1,7 +1,7 @@
 ---
 title: "Long running and scheduled programs"
-teaching: 20
-exercises: 15
+teaching: 15
+exercises: 10
 questions:
 - How do I prevent that programs stop running if I disconnect
 - How can I schedule a program to be executed at certain times
@@ -15,6 +15,16 @@ keypoints:
 - You can create persistent terminal sessions using `tmux`, that keep running even if you disconnect
 - With `htop` you can check on resource consumption of the running processes 
 ---
+
+> ## Example code
+>
+> In this episode you will work with example code. During the
+> workshop your instructor will have set up a user account
+> that comes with the example code already provided.
+> If you are not participating in the workshop, you can 
+> [download an archive](../files/userbase.tar.gz)
+> with all the files assumed to be present during this episode.
+{: .prereq }
 
 A computer running in the cloud can be a handy system to run
 a long running computation. Unfortunately, once your ssh client

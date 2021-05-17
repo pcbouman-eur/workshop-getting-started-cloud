@@ -15,6 +15,15 @@ keypoints:
 - There are different option to pass data into your program
 ---
 
+> ## Example code
+>
+> In this episode you will work with example code. During the
+> workshop your instructor will have set up a user account
+> that comes with the example code already provided.
+> If you are not participating in the workshop, you can 
+> [download an archive](../files/userbase.tar.gz)
+> with all the files assumed to be present during this episode.
+{: .prereq }
 
 In this episode we will run our own code, written in Java,
 from the command line. Let us suppose that we have written a

@@ -1,6 +1,6 @@
 ---
 title: Writing and reading files
-teaching: 30
+teaching: 10
 exercises: 15
 questions:
 - How do I create/edit text files?

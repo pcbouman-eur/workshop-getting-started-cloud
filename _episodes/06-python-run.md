@@ -1,6 +1,6 @@
 ---
 title: "(Option 1 - Python) Run your own code"
-teaching: 30
+teaching: 15
 exercises: 15
 questions:
 - How do I run Python programs?
@@ -15,6 +15,15 @@ keypoints:
 - There are different option to pass data into your program
 ---
 
+> ## Example code
+>
+> In this episode you will work with example code. During the
+> workshop your instructor will have set up a user account
+> that comes with the example code already provided.
+> If you are not participating in the workshop, you can 
+> [download an archive](../files/userbase.tar.gz)
+> with all the files assumed to be present during this episode.
+{: .prereq }
 
 In this episode we will run our own code, written in Python,
 from the command line. Let us suppose that we have written a

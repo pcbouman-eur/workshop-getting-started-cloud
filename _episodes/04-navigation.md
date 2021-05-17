@@ -1,7 +1,7 @@
 ---
 title: "Moving around and looking at things"
 teaching: 15 
-exercises: 5
+exercises: 10
 questions:
 - How do I navigate and look around the system?
 objectives:
@@ -17,6 +17,16 @@ keypoints:
 - You can view help for a command with `man command` or `command --help`.
 - Hit <kbd>Tab</kbd> to autocomplete whatever you're currently typing.
 ---
+
+> ## Important Tips
+> In this episode you start working with the bash shell. There are two
+> very useful key combinations to know before you start.
+>
+> * You can go back to (and edit) the previous commands you typed with <kbd>&uarr;</kbd>. If you go too far in history, you can move forward in history with <kbd>&darr;</kdb>. Using these keys well will avoid a lot of type, in particular if you introduce typos, or want to make small adjustments to a command!
+> * Commands and filenames can often be autocompleted by pressing <kbd>Tab</kbd>. If you have to type in the name of a file `this_is_a_super_long_filename_i_would_hate_to_have_to_type_it_all`, you can type a small part of it, e.g. `this` and press tab. Typically, `bash` will auto-complete the filename for you, if this is possible. If there is some ambiguity, it will only autocomplete up to the part where there is no ambiguity. Try pressing <kbd>Tab</kbd> when you can, and you'll get the hang of it!
+>
+{: .prereq }
+
 
 At this point in the lesson, we've just logged into the system. Nothing has
 happened yet, and we're not going to be able to do anything until we learn a

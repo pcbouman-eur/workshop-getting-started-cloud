@@ -1,7 +1,7 @@
 ---
 title: "(BONUS) Wildcards and pipes"
-teaching: 45
-exercises: 10
+teaching: 0
+exercises: 0
 questions:
 - How can I run a command on multiple files at once?
 - Is there an easy way of saving a command's output?
