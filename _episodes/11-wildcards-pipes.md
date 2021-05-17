@@ -1,5 +1,6 @@
 ---
 title: "(BONUS) Wildcards and pipes"
+# Originally, these were 45 and 15
 teaching: 0
 exercises: 0
 questions:
