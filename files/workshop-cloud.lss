@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.7.0">
+  <GameIcon />
+  <GameName>Workshop Cloud Computing</GameName>
+  <CategoryName>
+  </CategoryName>
+  <Metadata>
+    <Run id="" />
+    <Platform usesEmulator="False">
+    </Platform>
+    <Region>
+    </Region>
+    <Variables />
+  </Metadata>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>0</AttemptCount>
+  <AttemptHistory />
+  <Segments>
+    <Segment>
+      <Name>What is Cloud Computing</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:10:00</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:10:00</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:10:13.6830000</RealTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Setting up a machine in the cloud</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:20:00</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:10:00</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>Connecting to a remote system</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:30:00</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:10:00</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>Moving around and looking at things</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:50:00</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:20:00</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>Writing and reading files</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>01:10:00</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:20:00</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>Run your own code (+Break)</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>01:50:00</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:40:00</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>Long running and scheduled programs</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>02:10:00</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:20:00</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>Installing Software</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>02:20:00</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:10:00</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>Conclusion</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>02:25:00</RealTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:00</RealTime>
+      </BestSegmentTime>
+      <SegmentHistory />
+    </Segment>
+  </Segments>
+  <AutoSplitterSettings />
+</Run>
