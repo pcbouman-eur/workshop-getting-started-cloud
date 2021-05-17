@@ -3,16 +3,16 @@ title: "Setting up a machine in the cloud"
 teaching: 10
 exercises: 0
 questions:
-- "What settings should you consider for my virtual machine"
-- "What options are there to connect to and control your virtual machine"
+- "How do I create and configure a virtual machine I can control"
+- "How can I clean up my virtual machine when I'm done with it"
 objectives:
-- "Learn some historic developments that lead to cloud computing"
-- "Understand the main drivers of cloud computing"
-- "Know typical use cases of cloud computing relevant for your work"
+- "Get an idea of how you create a new virtual machine, for example in Microsoft Azure"
+- "Know what settings and options are important to consider when creating a new virtual machine"
+- "Be aware how you clean up to avoid unexpected costs"
 keypoints:
-- "Explain concepts of centralization, outsourcing and virtualization"
-- "Discuss different cloud service models such as IaaS and SaaS"
-- "Name the important cloud service providers such as Amazon and Microsoft"
+- "Understand that CPU, RAM, Disk Space, Operating System and a administrative user are needed when you create a new virtual machine"
+- "Understand that a hostname and/or IP address is needed to connect to a virtual machine, either using Secure Shell (SSH) or Remote Desktop (RDP)"
+- "Be aware that you delete/stop all resources when you are finished with you virtual machine, to avoid unexpected costs."
 ---
 
 > ## You do not need to perform these steps during this workshop!
@@ -26,7 +26,7 @@ keypoints:
 
 As a first step, we will start a Virtual Machine in the cloud. In this example
 we will use Microsoft Azure, but if you use another provider (e.g. Amazon, Google)
-the procedure will be similar.
+the procedure will be similar. A list of providers you can consider was provided in [the first lesson](../01-introduction/index.html#providers), but these steps should be quite similar for almost all cloud providers and hosters who offer Virtual Private Servers (VPS).
 
 ## Starting a new Virtual Machine
 

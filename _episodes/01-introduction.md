@@ -109,7 +109,7 @@ some additional software pre-configured to facilitate a particular task, i.e. a 
 with R and Python and the most popular packages pre-installed, saving you the hassle of having to install them
 yourself.
 
-> ## Some cloud providers
+> ## Some cloud providers <a name="providers"></a>
 > Below is a list of some well-known cloud providers and useful services offered by them.
 >
 > * [Microsoft Azure](https://azure.microsoft.com) offers [Virtual Machines](https://azure.microsoft.com/en-us/services/virtual-machines/) and has a [free $100 trial for students](https://azure.microsoft.com/en-us/free/students/)
