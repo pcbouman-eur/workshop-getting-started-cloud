@@ -1,5 +1,5 @@
 ---
-title: "Installing Software"
+title: "System Management and Installation"
 teaching: 5
 exercises: 5
 questions:

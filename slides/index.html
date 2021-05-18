@@ -29,6 +29,27 @@
 			.small {
 				font-size: 80%;
 			}
+			
+			kbd {
+				display: inline-block;
+				margin: 0 .1em;
+				padding: .1em .6em;
+				font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+				font-size: 60%;
+				/* line-height: 1.4; */
+				color: #242729;
+				text-shadow: 0 1px 0 #FFF;
+				background-color: #e1e3e5;
+				border: 1px solid #adb3b9;
+				border-radius: 3px;
+				box-shadow: 0 1px 0 rgba(12,13,14,0.2), 0 0 0 2px #FFF inset;
+				white-space: nowrap;
+				font-style: normal;
+			}
+
+			.no-ln td.hljs-ln-numbers {
+				display: none;
+			}
 		</style>
 	</head>
 
@@ -230,6 +251,16 @@
 							<li>Monitoring and Analytics services</li>
 						</ul>
 					</section>
+					<section>
+						<h3>Why Linux/Unix command line?</h3>
+						<ul class="smaller">
+							<li>Very common Operating System for servers, cloud computing and scientific computing</li>
+							<li>A workshop on controlling Windows via Remote Desktop is not very interesting</li>
+							<li>Windows has license costs, virtual machines running it are typically more expensive</li>
+							<li>Command lines are very flexible and can be automated more easily than visually clicking buttons</li>
+						</ul>
+						<p>However, <strong>use the right tool for the right job!</strong> Command lines are very useful, but they are no silver bullet.</p>
+					</section>					
 					<section data-markdown>
 						## Key Points
 
@@ -298,11 +329,166 @@
 					<section>
 						<h2>Moving around and looking at things</h2>
 					</section>
+					<section>
+						<h3>First things first</h3>
+						<p>You will have to type in a lot of commands. Be clever!</p>
+						<ul>
+							<li>The <code>$</code> indicates the shell is waiting for a command. Type a command and press <kbd>&crarr;</kbd> to execute it.</li>
+							<li>The <kbd>Tab</kbd> key can often be used to autocomplete long filenames, paths, commands. Try to use it often, don't be shy!</li>
+							<li>The <kbd>&uarr;</kbd> key can be used to go back to previous commands and edit them. If you go back too far, the <kbd>&darr;</kbd> key can be used to go forward in history.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>From this ...</h3>
+						<figure>
+							<img src="../fig/windows-explorer.png" alt="File navigation in Windows Explorer" height="400">
+							<figcaption><small>File navigation in Windows Explorer</small></figcaption>
+						</figure>						
+					</section>
+					<section>
+						<h3>... to this ...</h3>
+						<pre><code class="language-plaintext no-ln" data-trim data-line-numbers="1|2|3|4|5|6|7|8-10"><script type="text/template"> 
+							instructor1@Cloud-Workshop-VM:~$ ls
+							examples  welcome.txt
+							instructor1@Cloud-Workshop-VM:~$ cd examples
+							instructor1@Cloud-Workshop-VM:~/examples$ ls
+							R  data1.txt  data2.txt  java  longtask  python
+							instructor1@Cloud-Workshop-VM:~/examples$ cd java
+							instructor1@Cloud-Workshop-VM:~/examples/java$ ls
+							Divisors.java           DivisorsArgs.java   picocli-4.6.1.jar
+							DivisorsArgParse.java   DivisorsStdIn.java  project
+							DivisorsArgParse2.java  PrintArgs.java
+						</script></code></pre>
+					</section>
+					<section>
+						<h3>... or even this</h3>
+						<pre><code class="language-plaintext no-ln" data-trim data-line-numbers="1|2-10"><script type="text/template"> 
+							instructor1@Cloud-Workshop-VM:~$ tree -L 2
+							.
+							├── examples
+							│   ├── R
+							│   ├── data1.txt
+							│   ├── data2.txt
+							│   ├── java
+							│   ├── longtask
+							│   └── python
+							└── welcome.txt
+						</script></code></pre>
+					</section>
+					<section>
+						<h3>Important Commands</h3>
+							<table style="font-size: 60%">
+								<thead>
+									<th scope="col">Command</th>
+									<th scope="col">Action</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code>whoami</code></td>
+										<td>Print your username</td>
+									</tr>
+									<tr>
+										<td><code>pwd</code></td>
+										<td>Print current working directory</td>
+									</tr>
+									<tr>
+										<td><code>cd name</code></td>
+										<td>Move to directory called <code>name</code></td>
+									</tr>									
+									<tr>
+										<td><code>cd ..</code></td>
+										<td>Move up one directory</td>
+									</tr>	
+									<tr>
+										<td><code>mkdir name</code></td>
+										<td>Creates a directory called <code>name</code></td>
+									</tr>
+									<tr>
+										<td><code>ls</code></td>
+										<td>List files in current working directory</td>
+									</tr>
+									<tr>
+										<td><code>ls -l</code></td>
+										<td>List files in current working directory (long format)</td>
+									</tr>
+									<tr>
+										<td><code>ls --help</code></td>
+										<td>Help for the <code>ls</code> command</td>
+									</tr>
+									<tr>
+										<td><code>man ls</code></td>
+										<td>Read the manual of the <code>ls</code> command. Quit by pressing <kbd>Q</kbd></td>
+									</tr>
+									<tr>
+										<td><code>tree -L 2</code></td>
+										<td>Shows a file and directory tree of depth 2.</td>
+									</tr>									
+								</tbody>
+							</table>
+					</section>
 				</section>				
 
 				<section>
 					<section>
 						<h2>Writing and reading files</h2>
+					</section>
+					<section>
+						<h3>Dealing with files</h3>
+						<ul>
+							<li>Creating/Editing them</li>
+							<li>Viewing their contents</li>
+							<li>Moving/renaming them</li>
+							<li>Deleting them</li>
+							<li>Download a file from the internet</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Important Commands</h3>
+							<table style="font-size: 55%">
+								<thead>
+									<th scope="col" style="width: 25%">Command</th>
+									<th scope="col">Action</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code>nano file</code></td>
+										<td>Opens a file called <code>file</code> in the nano editor. <br /> Save your edits with <kbd>Ctrl</kbd>+<kbd>O</kbd>
+										and quit nano with <kbd>Ctrl</kbd>+<kbd>X</kbd></td>
+									</tr>
+									<tr>
+										<td><code>cat file</code></td>
+										<td>Print the contents of the file called <code>name</code> to the terminal</td>
+									</tr>
+									<tr>
+										<td><code>mv from to</code></td>
+										<td>Move or rename a file called <code>from</code> to new location or name <code>to</code></td>
+									</tr>									
+									<tr>
+										<td><code>rm file</code></td>
+										<td>Delete a file called <code>name</code></td>
+									</tr>	
+									<tr>
+										<td><code>rm -rf dir</code></td>
+										<td>Delete director called <code>dir</code> and all files and subdirectories it contains. <br /><strong>Be very careful with this!</strong></td>
+									</tr>
+									<tr>
+										<td><code>wget url</code></td>
+										<td>Download the file specified by URL <code>url</code> and save it as a file</td>
+									</tr>
+									<tr>
+										<td><code>head -n 5 file</code></td>
+										<td>Shows the first 5 lines of <code>file</code></td>
+									</tr>
+									<tr>
+										<td><code>tail -n 5 file</code></td>
+										<td>Shows the first 5 lines of <code>file</code></td>
+									</tr>
+									<tr>
+										<td><code>less file</code></td>
+										<td>Read <code>file</code> interactively. Exit by pressing <kbd>Q</kbd></td>
+									</tr>
+								</tbody>
+							</table>
 					</section>
 				</section>		
 
@@ -310,23 +496,185 @@
 					<section>
 						<h2>Run your own code (Python/R/Java)</h2>
 					</section>
+					<section>
+						<h3>Writing Programs for the Command Line</h3>
+						<ul style="font-size: 55%">
+							<li><strong>Standard Out</strong>: letting your program write to the <em>Standard Out</em> with <code>print()</code> (Python/R), <code>cat()</code> (R) or <code>System.out.println()</code> (Java)
+							will make it appear on terminal.</li>
+							<li><strong>Standard In</strong>: letting a program read from the <em>Standard In</em> with <code>prompt()</code> (Python), <code>scan(file=stdin,...)</code> (R) or reading from <code>System.in</code> (Java)
+							will make the program read in what the user is typing into the terminal while the program is running.</li>
+							<li><strong>Standard Error</strong>: similar to standard out, but for errors. Not covered in this episode.</li>
+							<li><strong>Command line arguments</strong>: arguments passed when running a program from the command line can be accessed as a list/array/vector of strings called <code>sys.argv</code> (Python), <code>commandArgs(trailingOnly=TRUE)</code>
+							(R) or the <code>String [] args</code> argument of a Java main-method.</li>
+							<li><strong>Argument parser libraries</strong> make it very easy to define and access command line arguments from within your program.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Simple program</h3>
+						<ul style="font-size: 55%">
+							<li><strong>Input</strong>: an upper bound (integer) and a list of divisors (integer)</li>
+							<li><strong>Output</strong>: a list of integers between 1 and the upper bound that are divisible by all of the divisors.</li>
+							<li><strong>Example</strong>: upper bound: 100, divisors: 3, 5 should give the output 15, 30, 45, 60, 75, 90</li>
+						</ul>
+					</section>					
+					<section>
+						<h3>Important Commands</h3>
+							<table style="font-size: 55%">
+								<thead>
+									<th scope="col" style="width: 25%">Command</th>
+									<th scope="col">Action</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code>python3 file</code></td>
+										<td>Run the python code in <code>file</code> with the Python interpreter </td>
+									</tr>
+									<tr>
+										<td><code>Rscript file</code></td>
+										<td>Run the R code in <code>file</code> with the R interpreter</td>
+									</tr>
+									<tr>
+										<td><code>javac files</code></td>
+										<td>Compile one or multiple <code>.java</code> source code <code>files</code> to <code>.class</code> bytecode files.</td>
+									</tr>									
+									<tr>
+										<td><code>java ClassName</code></td>
+										<td>Run the program starting from the main method in class <code>ClassName</code></td>
+									</tr>
+									<tr>
+										<td><code>command &lt; file</code></td>
+										<td>Runs <code>command</code> and sends the contents of <code>file</code> to the standard in of that process as if someone was typing it into the terminal while that process is running.</td>
+									</tr>									
+									<tr>
+										<td><code>nano file</code></td>
+										<td>Opens a file called <code>file</code> in the nano editor. <br /> Save your edits with <kbd>Ctrl</kbd>+<kbd>O</kbd>
+										and quit nano with <kbd>Ctrl</kbd>+<kbd>X</kbd></td>
+									</tr>
+									<tr>
+										<td><code>less file</code></td>
+										<td>Read <code>file</code> interactively. Exit by pressing <kbd>Q</kbd></td>
+									</tr>
+								</tbody>
+							</table>
+					</section>					
 				</section>	
 
 				<section>
 					<section>
 						<h2>Long running and scheduled programs</h2>
 					</section>
+					<section>
+						<h3>Scheduling Commands</h3>
+						<ul>
+							<li>A tool called <code>cron</code> can be used to periodically execute commands, defined by lines in a
+							<code>crontab</code></li>
+							<li>Example 1 : <code>*/5 * * * * myCommand</code> runs <code>myCommand</code> every five minutes</li>
+							<li>Example 2 : <code>0 12 1 * * myCommand</code> runs <code>myCommand</code> on the first day of each month</li>
+							<li>You can use an online tool such as <a href="https://crontab-generator.org/" target="_blank">Crontab Generator</a>
+							to generate the lines for the crontab, or write them yourself.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Keeps command running while you disconnect</h3>
+						<ul class="small">
+							<li>Once you close your SSH connection, programs currently running will be stopped.</li>
+							<li>You can avoid this by running your programs in one or more virtual terminals to which you can detach and reattach with the <code>tmux</code> utility.</li>
+						<li><strong>Keep an eye on your resource consumption!</strong> This can be done conveniently with the <code>htop</code> program.</li>
+						</ul>
+						<figure>
+							<img src="../fig/htop.png" alt="The htop process manager" height="200"/>
+						</figure>
+					</section>					
+					<section>
+						<h3>Important Commands</h3>
+							<table style="font-size: 50%">
+								<thead>
+									<th scope="col" style="width: 33%">Command / Keys</th>
+									<th scope="col">Action</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code>crontab -e</code></td>
+										<td>Edit your user's cron table that specifies scheduled tasks</td>
+									</tr>
+									<tr>
+										<td><code>date</code></td>
+										<td>Prints the current date and time</td>
+									</tr>									
+									<tr>
+										<td><code>tmux new -s name</code></td>
+										<td>Create a new virtual terminal session with name <code>name</code></td>
+									</tr>
+									<tr>
+										<td><code>tmux</code></td>
+										<td>Create a new virtual terminal session</td>
+									</tr>
+									<tr>
+										<td><code>tmux ls</code></td>
+										<td>List existing <code>tmux</code> virtual terminal sessions</td>
+									</tr>									
+									<tr>
+										<td><code>tmux detach</code> <br />
+											or press <kbd>Ctrl</kbd> + <kbd>B</kbd>, then <kbd>D</kbd></td>
+										<td>Detach from the current virtual terminal</td>
+									</tr>
+									<tr>
+										<td><code>tmux attach -t name</code></td>
+										<td>Enter the virtual terminal sessions called <code>name</code></td>
+									</tr>
+									<tr>
+										<td><code>tmux kill-session -t name</code></td>
+										<td>Ends the virtual terminal session called <code>name</code>. <br />
+										This ends all programs running in it.</td>
+									</tr>
+									<tr>
+										<td><code>exit</code></td>
+										<td>Leaves the virtual terminal (if inside one). <br /> Closes the connection if you
+											perform it in the shell directly.
+										</td>
+									</tr>
+									<tr>
+										<td><code>htop</code></td>
+										<td>Check resource consumption. <br /> Press <kbd>F10</kbd> or click <code>F10Quit</code> to exit.
+										</td>
+									</tr>									
+								</tbody>
+							</table>
+					</section>							
 				</section>
 
 				<section>
 					<section>
-						<h2>Installing Software</h2>
+						<h2>System Management and Installation</h2>
+					</section>
+					<section>
+						<h3>Administration tasks</h3>
+						<ul style="font-size: 70%">
+							<li>Not all tasks can be executed by regular users. If you have insufficient permissions, you can perform <code>sudo command</code>
+							to perform a command with administrative rights. (<strong>Not possible during the workshop</strong>)</li>
+							<li><strong>Package managers</strong> such as <code>apt</code> from Debian/Ubuntu based system and <code>yum</code> for Redhat
+							based systems can be used to install software, similar to app stores for your phone.</li>
+							<li>On the server you can use <code>apt search</code> to search for packages that you could install if you had super-user rights</li>
+							<li>For some software (such as R) you may have to add repositories with additional packages.</li>
+						</ul>
 					</section>
 				</section>
 
 				<section>
 					<section>
 						<h2>Conclusion</h2>
+					</section>
+					<section>
+						<h3>Final Remarks</h3>
+						<ul>
+							<li>Two more episodes you can play around with yourself.</li>
+							<li>Episode 11 focuses is on combining commands on the terminal, connect them via standard in, standard out.</li>
+							<li>Episode 12 focuses on writing shell scripts, running certain commands for each file in a directory.</li>
+							<li>The server will remain available a bit longer, feel free to keep experimenting.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Thanks for your attention!</h2>
 					</section>
 				</section>
 
@@ -351,7 +699,6 @@
 				hash: true,
 				transition: 'none',
 				backgroundTransition: 'none',
-
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]

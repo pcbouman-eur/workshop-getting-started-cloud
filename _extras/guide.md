@@ -2,6 +2,8 @@
 title: "Instructor Notes"
 ---
 
+[The slides for the instructor are web-based](../slides/index.html).
+
 The quickest way to teach this workshop is by providing students with a
 server they can play around with. This can for example be done by
 setting up a virtual machine in Microsoft Azure, as is discussed in the
