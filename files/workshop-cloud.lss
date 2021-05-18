@@ -112,7 +112,7 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>Installing Software</Name>
+      <Name>System Management and Installation</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best">

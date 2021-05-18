@@ -77,7 +77,7 @@
 						<li>Writing and reading files (20 min)</li>
 						<li>Run your own code (Python/R/Java) + Break (40 min)</li>
 						<li>Long running and scheduled programs (20 min)</li>
-						<li>Installing Software (10 min)</li>
+						<li>System Management and Installation (10 min)</li>
 						<li>Conclusion</li>
 					</ol>
 				</section>
@@ -193,16 +193,8 @@
 						</figure>
 					</section>
 					<section>
-						<h3>Administrative User</h3>
-						<p>Security is important, and you need this to be able to connect to your machine</p>
-						<figure>
-							<img src="../fig/azure-create-vm-3.png" alt="Configuring an administrative user" height="400">
-							<figcaption>Configuring an administrative user for the Virtual Machine</figcaption>
-						</figure>
-					</section>
-					<section>
 						<h3>Storage</h3>
-						<p>If the default storage is not enough (storage typically incurs a fee as well)</p>
+						<p class="smaller">If the default storage is not enough (storage typically incurs a fee as well)</p>
 						<figure>
 							<img src="../fig/azure-create-vm-4.png" alt="Configuring storage on the Virtual Machine" height="400">
 							<figcaption>Configuring storage on the Virtual Machine</figcaption>
@@ -214,14 +206,6 @@
 						<figure>
 							<img src="../fig/azure-create-vm-5.png" alt="Confirm the creation of the Virtual Machine" height="400">
 							<figcaption>Confirm the creation of the Virtual Machine</figcaption>
-						</figure>
-					</section>
-					<section>
-						<h3>Ready</h3>
-						<p>After a few moments, the machine is now ready to use</p>
-						<figure>
-							<img src="../fig/azure-create-vm-6.png" alt="Our Virtual Machine is ready to use!" height="400">
-							<figcaption>Our Virtual Machine is ready to use!</figcaption>
 						</figure>
 					</section>
 					<section>
@@ -277,7 +261,7 @@
 					<section data-markdown>
 						## How to connect
 						
-						* **Windows** : Use [PuTTY) (you probably want the 64-bit x86 installer)
+						* **Windows** : Use PuTTY (you probably want the 64-bit x86 installer)
 						* **Mac OS** : Terminal application (use the finder, or find it under Accessories)
 						* **Linux** : Use the `ssh` command from the terminal
 					</section>
@@ -457,7 +441,7 @@
 									</tr>
 									<tr>
 										<td><code>cat file</code></td>
-										<td>Print the contents of the file called <code>name</code> to the terminal</td>
+										<td>Print the contents of the file called <code>file</code> to the terminal</td>
 									</tr>
 									<tr>
 										<td><code>mv from to</code></td>
@@ -465,7 +449,7 @@
 									</tr>									
 									<tr>
 										<td><code>rm file</code></td>
-										<td>Delete a file called <code>name</code></td>
+										<td>Delete a file called <code>file</code></td>
 									</tr>	
 									<tr>
 										<td><code>rm -rf dir</code></td>
@@ -671,6 +655,7 @@
 							<li>Episode 11 focuses is on combining commands on the terminal, connect them via standard in, standard out.</li>
 							<li>Episode 12 focuses on writing shell scripts, running certain commands for each file in a directory.</li>
 							<li>The server will remain available a bit longer, feel free to keep experimenting.</li>
+							<li>If installed, you can use many of the commands you learned in a local terminal as well!</li>
 						</ul>
 					</section>
 					<section>

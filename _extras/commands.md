@@ -55,7 +55,7 @@ title: Useful Commands
         </tr>
         <tr>
             <td><code>cat file</code></td>
-            <td>Print the contents of the file called <code>name</code> to the terminal</td>
+            <td>Print the contents of the file called <code>file</code> to the terminal</td>
         </tr>
         <tr>
             <td><code>mv from to</code></td>
@@ -63,7 +63,7 @@ title: Useful Commands
         </tr>									
         <tr>
             <td><code>rm file</code></td>
-            <td>Delete a file called <code>name</code></td>
+            <td>Delete a file called <code>file</code></td>
         </tr>	
         <tr>
             <td><code>rm -rf dir</code></td>
