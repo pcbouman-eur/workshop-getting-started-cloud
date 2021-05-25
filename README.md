@@ -36,14 +36,13 @@ Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%
 
 Current maintainers of this lesson are 
 
-* FIXME
-* FIXME
-* FIXME
+* Paul Bowman
 
 
 ## Authors
 
-A list of contributors to the lesson can be found in [AUTHORS](AUTHORS)
+For now, a list of some of the contributors to the lesson can be obtained from the
+[commit history](https://github.com/pcbouman-eur/workshop-getting-started-cloud/graphs/contributors)
 
 ## Citation
 
